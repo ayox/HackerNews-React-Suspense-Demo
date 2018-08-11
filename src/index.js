@@ -1,7 +1,7 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import ListLoader from './ListLoader'
-import {Col, InputNumber, Layout, Radio, Row, Spin} from 'antd'
+import { Col, InputNumber, Layout, Radio, Row, Spin } from 'antd'
 import 'antd/dist/antd.css'
 
 const {Content} = Layout
@@ -15,11 +15,11 @@ class App extends Component {
     this.setState({
       url: `https://hacker-news.firebaseio.com/v0/${
         e.target.value
-      }.json?print=pretty`
+        }.json?print=pretty`
     })
   }
 
-  render() {
+  render () {
     const {url, count} = this.state
     return (
       <Layout>
@@ -51,7 +51,7 @@ class App extends Component {
             <ListLoader
               url={url}
               count={count}
-              ms={300} // you can change this to 0 show spinners
+              ms={2000} // you can change this to 0 show spinners
               fallback={
                 <Spin>
                   <p style={{marginTop: 10}}>loading..</p>
@@ -70,4 +70,4 @@ App.defaultProps = {}
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
-root.render(<App />)
+root.render(<App/>)
