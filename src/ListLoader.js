@@ -18,8 +18,8 @@ const ListAsync = withCache(props => {
   return (
     <List
       itemLayout="horizontal"
-      // dataSource={list}
-      dataSource={list.slice(0, props.count || list.length - 1)} //uncomment this to show only 10 top stories
+      // dataSource={list} //uncomment this to test all stories
+      dataSource={list.slice(0, props.count || 20)}
       renderItem={item => <ListItemLoader id={item} {...props} />}
     />
   )

@@ -1,8 +1,8 @@
 import React from 'react'
-import {withCache} from './withCache'
-import {createResource} from 'simple-cache-provider'
-import {Timeout} from './Timeout'
-import {List} from 'antd'
+import { withCache } from './withCache'
+import { createResource } from 'simple-cache-provider'
+import { Timeout } from './Timeout'
+import { List } from 'antd'
 
 const getStory = createResource(id => {
   return new Promise(async (res, rej) => {
@@ -20,14 +20,28 @@ const ListItemAsync = withCache(props => {
   return (
     <List.Item>
       <List.Item.Meta
-        title={<a href={listItem.url}>{listItem.title}</a>}
-        description={listItem.by}
+        title={
+          <a href={listItem.url} target={'_blank'}>
+            {listItem.title}
+          </a>
+        }
+        description={
+          <span>
+            By: {listItem.by}
+            <a
+              target={'_blank'}
+              href={`https://news.ycombinator.com/item?id=${props.id}`}
+            >
+              comments
+            </a>
+          </span>
+        }
       />
     </List.Item>
   )
 })
 
-export function ListItemLoader(props) {
+export function ListItemLoader (props) {
   const {ms, fallback, id} = props
   return (
     <React.unstable_AsyncMode>

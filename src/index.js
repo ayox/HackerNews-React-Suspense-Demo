@@ -24,15 +24,16 @@ class App extends Component {
     return (
       <Layout>
         <Content style={{margin: '24px 16px 0', overflow: 'initial'}}>
+          <h1>Hacker News</h1>
           <Row style={{marginBottom: 10}}>
-            <Col span={5}>
-              <Radio.Group onChange={this.onChange} defaultValue="a">
-                <Radio.Button value="topstories">Top</Radio.Button>
+            <Col span={3}>
+              <Radio.Group onChange={this.onChange} defaultValue="beststories">
                 <Radio.Button value="beststories">Best</Radio.Button>
+                <Radio.Button value="topstories">Top</Radio.Button>
                 <Radio.Button value="newstories">New</Radio.Button>
               </Radio.Group>
             </Col>
-            <Col span={5}>
+            <Col span={3}>
               <InputNumber
                 style={{width: '100%'}}
                 onChange={v =>
@@ -46,7 +47,7 @@ class App extends Component {
               />
             </Col>
           </Row>
-          <div style={{padding: 24, background: '#fff', textAlign: 'center'}}>
+          <div style={{padding: 24, background: '#fff'}}>
             <ListLoader
               url={url}
               count={count}
