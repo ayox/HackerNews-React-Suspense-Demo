@@ -1,5 +1,5 @@
 {
-  "name": "react-suspense-demo-market-news",
+  "name": "react-suspense-hacker-news",
   "version": "1.0.0",
   "description": "Playing around with React suspense",
   "keywords": [
@@ -7,7 +7,7 @@
     "suspense",
     "future"
   ],
-  "homepage": "https://codesandbox.io/s/new",
+  "homepage": "https://react-suspense-hacker-news.herokuapp.com/",
   "main": "src/index.js",
   "dependencies": {
     "antd": "3.6.6",
