@@ -20,7 +20,9 @@
     "react-transition-group": "2.4.0",
     "simple-cache-provider": "0.7.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "prettier": "^1.14.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

@@ -1,7 +1,7 @@
 import React from 'react'
-import { SimpleCache } from 'simple-cache-provider'
+import {SimpleCache} from 'simple-cache-provider'
 
-export function withCache (Component) {
+export function withCache(Component) {
   return props => (
     <SimpleCache.Consumer>
       {cache => <Component cache={cache} {...props} />}
